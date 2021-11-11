@@ -1,9 +1,14 @@
 #include <Arduino.h>
 
+#define ONBOARD_LED 2
+
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(ONBOARD_LED, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  delay(1000);
+  digitalWrite(ONBOARD_LED, HIGH);
+  delay(100);
+  digitalWrite(ONBOARD_LED, LOW);
 }
