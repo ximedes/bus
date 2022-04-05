@@ -88,7 +88,7 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
 
 void setupMQTT()
 {
-    mqttClient.setServer("b59f35eed5a04082a35c80b3230c7b20.s1.eu.hivemq.cloud", 8883);
+    mqttClient.setServer(MQTT_BROKER, 8883);
 
     // set the callback function
     mqttClient.setCallback(mqttCallback);
@@ -101,7 +101,7 @@ void reconnectMQTT()
     {
         Serial.println("Reconnecting to MQTT Broker..");
 
-        if (mqttClient.connect(deviceId, deviceId, "jessesjesseS1"))
+        if (mqttClient.connect(deviceId, deviceId, MQTT_PW))
         {
             mqttClient.subscribe("light");
             Serial.println("Connected.");
