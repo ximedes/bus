@@ -11,6 +11,8 @@ Reference for the `credentials.h`:
 
 #define WIFI_SSID "ssid"
 #define WIFI_PW "password"
+#define MQTT_PW "mqtt-password"
+#define MQTT_BROKER "mqtt-broker-url"
 
 #endif
 ```
